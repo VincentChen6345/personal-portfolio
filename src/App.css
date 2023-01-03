@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.app-container {
+  padding: 0 80px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-container {
+  position: relative;
+  font-size: 18px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 80px;
+  background-color: rgba(211, 211, 211, 0.302);
+}
+.right-nav {
+  display: flex;
+}
+/* p {
+  font-family: Arial, Helvetica, sans-serif;
+} */
+.introduction {
+  display: flex;
+  margin-top: 80px;
+  background-color: bisque;
+}
+.introduction-text {
+  padding: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.portrait-photo {
+  width: 35vw;
+}
+span li {
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+span li:not(:last-child) {
+  border: 2px solid blue;
+  padding: 5px 15px;
+}
+.toggle-btn {
+  margin: 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading-primary {
+  font-size: 90px;
+}
+
+.heading-secondary {
+  font-size: 50px;
+}
+.summary {
+  font-size: 25px;
+  padding-right: 200px;
+  margin-top: 30px;
+  line-height: 33px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid blue;
+  padding: 5px 15px;
+  width: fit-content;
+}
+.about-me {
+  text-align: center;
+}
+.lang-svg {
+  width: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.language-icons {
+  margin-top: 50px;
+  display: flex;
 }

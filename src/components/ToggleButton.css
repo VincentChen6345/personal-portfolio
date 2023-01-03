@@ -1,0 +1,51 @@
+.icon {
+  width: 18px;
+  height: 18px;
+  z-index: 10;
+}
+
+/* the switch- the box around the slider */
+.switch {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
+  height: 40px;
+  padding: 0 12px;
+}
+/*Hide Default HTML checkbox*/
+.switch input {
+  display: none;
+}
+
+/*the slider*/
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s ease-out;
+  background-color: lightgrey;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background-color: rgb(255, 255, 255);
+  left: 5px;
+  top: 5px;
+  transition: 0.4s ease-out;
+}
+input:checked + .slider {
+  background-color: aqua;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+}
