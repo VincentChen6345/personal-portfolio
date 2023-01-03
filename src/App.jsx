@@ -3,24 +3,41 @@ import portraitShort from "./img/portrait-short.png";
 import html5 from "./img/html5.svg";
 import css from "./img/css3.svg";
 import javascript from "./img/javascript.svg";
+import { useRef } from "react";
 
 import { ToggleButton } from "./components/ToggleButton.jsx";
 
 function App() {
+  const handleClickScroll = (section) => {
+    const aboutMeEl = document.getElementById("about-me-section");
+    const myProjectsEl = document.getElementById("my-projects");
+    const contactMeEl = document.getElementById("contact-me");
+    console.log(aboutMeEl);
+    if (section === 1) {
+      aboutMeEl.scrollIntoView();
+    }
+    if (section === 2) {
+      myProjectsEl.scrollIntoView();
+    }
+    if (section === 3) {
+      contactMeEl.scrollIntoView();
+    }
+  };
+
   return (
     <body className="app-container">
       <script
         src="https://kit.fontawesome.com/bd278545d3.js"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></script>
       <header id="header">
         <nav className="nav-container">
           <ul className="nav-bar">
             <li>V.CHEN</li>
             <span className="right-nav">
-              <li>About Me</li>
-              <li>Projects</li>
-              <li>Contact</li>
+              <li onClick={() => handleClickScroll(1)}>About Me</li>
+              <li onClick={() => handleClickScroll(2)}>Projects</li>
+              <li onClick={() => handleClickScroll(3)}>Contact</li>
 
               <li className="toggle-btn">
                 <ToggleButton />
@@ -51,9 +68,10 @@ function App() {
           </div>
           <img src={portraitShort} alt="portrait " className="portrait-photo" />
         </div>
+        <div className="divider"></div>
       </header>
-      <section className="skill-section">
-        <h1>my skills</h1>
+      <section className="about-me-section" id="about-me-section">
+        <h1>About Me</h1>
       </section>
       <section id="my-projects" className="my-projects">
         <h1>My Projects</h1>
