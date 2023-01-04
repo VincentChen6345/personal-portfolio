@@ -1,0 +1,33 @@
+.card-icon {
+  width: 350px;
+  height: 250px;
+  margin-top: 50px;
+}
+.card-container {
+  border-radius: 10px;
+  height: 450px;
+  outline: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  white-space: pre-wrap;
+  align-items: center;
+}
+.card-container:hover > .description {
+  display: block;
+}
+.card-heading {
+  font-size: 30px;
+  padding: 20px 0;
+}
+.description {
+  background-color: lightgoldenrodyellow;
+  position: absolute;
+  top: 80px;
+  padding: 0 20px;
+  font-size: 18px;
+  transition: all 0.2s ease-out;
+}
+.hidden {
+  display: none;
+}

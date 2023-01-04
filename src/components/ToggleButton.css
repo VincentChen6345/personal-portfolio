@@ -3,7 +3,12 @@
   height: 18px;
   z-index: 10;
 }
-
+.sun {
+  margin-left: -1px;
+}
+.moon {
+  margin-right: -1px;
+}
 /* the switch- the box around the slider */
 .switch {
   position: relative;
