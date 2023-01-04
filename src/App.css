@@ -137,3 +137,7 @@ em {
   font-size: 30px;
   cursor: pointer;
 }
+.link {
+  text-decoration: none;
+  color: #000;
+}

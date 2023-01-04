@@ -14,7 +14,8 @@
   align-items: center;
 }
 .card-container:hover > .description {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 .card-heading {
   font-size: 30px;
@@ -26,8 +27,9 @@
   top: 80px;
   padding: 0 20px;
   font-size: 18px;
-  transition: all 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
