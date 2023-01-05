@@ -1,0 +1,37 @@
+.project-image {
+  width: 100%;
+}
+
+.js-slider {
+  background-color: antiquewhite;
+  position: relative;
+  height: 100vh;
+  /* max-width: 1100px; */
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  background-color: red;
+  border: none;
+  height: 55px;
+  width: 55px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slider__btn--left {
+  left: 6%;
+  /* transform: translate(-50%, -50%); */
+}
+.slider__btn--right {
+  right: 6%;
+  /* transform: translate(50%, 50%); */
+}

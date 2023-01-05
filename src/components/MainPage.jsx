@@ -5,6 +5,8 @@ import javascript from "../img/javascript.svg";
 import { Card } from "./Card";
 import { Link } from "react-router-dom";
 import "../App.css";
+import "./MainPage.css";
+import { ProjectSlider } from "./ProjectSlider";
 export const MainPage = () => {
   return (
     <>
@@ -47,6 +49,7 @@ export const MainPage = () => {
       <section id="my-projects" className="my-projects">
         <div className="divider"></div>
         <h1 className="section-heading">My Projects</h1>
+        <ProjectSlider />
       </section>
       <section id="contact-me" className="contact-me">
         <div className="divider"></div>
