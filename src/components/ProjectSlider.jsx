@@ -8,10 +8,9 @@ import React, { useRef, useEffect, useCallback } from "react";
 export const ProjectSlider = () => {
   let curSlide = 0;
   const slidesRef = useRef();
-  let maxSlides;
   const goToSlide = useCallback((slideNumber) => {
     const slides = slidesRef.current.querySelectorAll(".slide");
-    maxSlides = slides.length;
+
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
     );
@@ -21,7 +20,7 @@ export const ProjectSlider = () => {
   }, [goToSlide]);
   const nextSlide = () => {
     curSlide++;
-    if (curSlide > maxSlides - 1) curSlide = 0;
+    if (curSlide > 3) curSlide = 0;
     goToSlide(curSlide);
   };
   const prevSlide = () => {
