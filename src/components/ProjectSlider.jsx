@@ -15,6 +15,7 @@ export const ProjectSlider = () => {
       (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
     );
   }, []);
+
   useEffect(() => {
     goToSlide(0);
   }, [goToSlide]);
@@ -49,8 +50,32 @@ export const ProjectSlider = () => {
         <button className="slider__btn slider__btn--right" onClick={nextSlide}>
           &rarr;
         </button>
+        <div className="project-overview hidden">
+          <h3 className="project-title">Bruce Lee Tribute Page</h3>
+          <ul className="language-container">
+            <li className="language">HTML</li>
+            <li className="language">CSS</li>
+          </ul>
+          <p className="paragraph-text">
+            Dedicated to my late idol Bruce Lee, I created this tribute page to
+            practice pure HTML and CSS.
+          </p>
+          <span className="btn-container">
+            <a
+              href="https://tribute-to-bruce-lee.netlify.app/"
+              className="btn btn-visit"
+            >
+              Visit
+            </a>
+            <a
+              href="https://github.com/VincentChen6345/tribute-to-bruce-lee"
+              className="btn btn-code"
+            >
+              Code
+            </a>
+          </span>
+        </div>
       </div>
-
       <div className="dots"></div>
     </div>
   );

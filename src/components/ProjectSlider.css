@@ -5,8 +5,9 @@
 .js-slider {
   background-color: antiquewhite;
   position: relative;
-  height: 100vh;
+  height: 618.75px;
   /* max-width: 1100px; */
+  width: 1100px;
   overflow: hidden;
 }
 .slide {
@@ -34,4 +35,56 @@
 .slider__btn--right {
   right: 6%;
   /* transform: translate(50%, 50%); */
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  height: 100%;
+  position: relative;
+  flex-direction: column;
+}
+
+.project-overview {
+  background-color: #000;
+  color: white;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.project-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.language-container {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  margin-bottom: 10px;
+}
+.language {
+  padding: 5px 5px;
+  border: white 2px solid;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.paragraph-text {
+  margin-bottom: 20px;
+}
+.btn-visit {
+  margin-right: 20px;
+  text-align: center;
+}
+.btn-code {
+  text-align: center;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.js-slider:hover .project-overview {
+  visibility: visible;
+  opacity: 1;
 }
