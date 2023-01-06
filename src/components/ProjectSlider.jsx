@@ -3,19 +3,19 @@ import project1 from "../img/project-1.png";
 import project2 from "../img/project-2.png";
 import project3 from "../img/project-3.png";
 import project4 from "../img/project-4.png";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 
 export const ProjectSlider = () => {
   let curSlide = 0;
   const slidesRef = useRef();
   let maxSlides;
-  const goToSlide = (slideNumber) => {
+  const goToSlide = useCallback((slideNumber) => {
     const slides = slidesRef.current.querySelectorAll(".slide");
     maxSlides = slides.length;
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
     );
-  };
+  });
   useEffect(() => {
     goToSlide(0);
   }, [goToSlide]);
