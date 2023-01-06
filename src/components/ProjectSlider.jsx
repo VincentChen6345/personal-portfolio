@@ -18,7 +18,7 @@ export const ProjectSlider = () => {
   };
   useEffect(() => {
     goToSlide(0);
-  }, [goToSlide()]);
+  }, [goToSlide]);
   const nextSlide = () => {
     curSlide++;
     if (curSlide > maxSlides - 1) curSlide = 0;
