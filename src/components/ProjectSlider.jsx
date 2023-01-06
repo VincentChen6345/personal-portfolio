@@ -15,7 +15,7 @@ export const ProjectSlider = () => {
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
     );
-  });
+  }, []);
   useEffect(() => {
     goToSlide(0);
   }, [goToSlide]);
