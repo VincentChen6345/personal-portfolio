@@ -52,6 +52,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 0;
+  width: 1100px;
 }
 .project-title {
   font-size: 20px;
@@ -84,7 +86,6 @@
   display: flex;
   justify-content: center;
 }
-.js-slider:hover .project-overview {
-  visibility: visible;
+.project-overview:hover {
   opacity: 1;
 }
