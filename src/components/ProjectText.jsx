@@ -6,7 +6,7 @@ const content = {
     "Life Advice Generator",
   ],
   languages: [
-    ["HTML", "CSS"],
+    ["HTML", "CSS", "SASS"],
     ["HTML", "CSS", "JS", "REACT"],
     ["HTML", "CSS", "JS", "REACT"],
     ["HTML", "CSS", "JS", "REACT"],

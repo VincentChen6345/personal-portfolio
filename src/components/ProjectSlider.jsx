@@ -39,13 +39,9 @@ export const ProjectSlider = () => {
 
     goToSlide(curSlide);
   };
-  useEffect(
-    () => {
-      goToSlide(curSlide);
-    },
-    [goToSlide],
-    curSlide
-  );
+  useEffect(() => {
+    goToSlide(curSlide);
+  }, [goToSlide, curSlide]);
   return (
     <div className="slider-container">
       <div className="js-slider" ref={slidesRef}>
