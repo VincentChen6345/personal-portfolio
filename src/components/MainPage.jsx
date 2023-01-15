@@ -7,6 +7,18 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import "./MainPage.css";
 import { ProjectSlider } from "./ProjectSlider";
+
+// const sendEmail = () => {
+//   Email.send({
+//     Host: "smtp.gmail.com",
+//     Username: "vincent.chen6345@hotmail.com",
+//     Password: "Treatyourselflikeafriend!",
+//     To: "vincent.chen6345@hotmail.com",
+//     From: document.getElementById("email").value,
+//     Subject: "New Contact Enquiry",
+//     Body: "this is the body ",
+//   }).then((message) => alert(message));
+// };
 export const MainPage = () => {
   return (
     <>
@@ -53,8 +65,21 @@ export const MainPage = () => {
       </section>
       <section id="contact-me" className="contact-me">
         <div className="divider"></div>
-        <h1 className="section-heading">Contact me</h1>
-        <p>Contact form goes here</p>
+        <div className="form-container">
+          <form className="contact-form">
+            <h1 className="section-heading contact-me">Contact me</h1>
+            <p className="contact-text">I would love to hear from you!</p>
+            <div className="input-span">
+              <input type="text" id="name" placeholder=" Name" required />
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+            <textarea placeholder="Message" id="message" rows="4"></textarea>
+            <button type="submit" className="send btn">
+              Send
+            </button>
+          </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
       </section>
     </>
   );

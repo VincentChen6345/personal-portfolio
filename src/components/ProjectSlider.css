@@ -5,9 +5,10 @@
 .js-slider {
   background-color: antiquewhite;
   position: relative;
-  height: 618.75px;
+  height: 562.5px;
   /* max-width: 1100px; */
-  width: 1100px;
+  /* Image ratio 16:9 */
+  width: 1000px;
   overflow: hidden;
 }
 .slide {
