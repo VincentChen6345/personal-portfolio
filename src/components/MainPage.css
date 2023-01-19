@@ -5,6 +5,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, min-content);
+  justify-content: center;
+  grid-row-gap: 15px;
 }
 form p {
   font-size: 20px;
@@ -17,7 +19,7 @@ form p {
   padding: 10px 20px;
 }
 .form-container {
-  background-color: purple;
+  background-color: lightseagreen;
   display: flex;
   height: 100%;
   width: 100%;
@@ -38,23 +40,59 @@ form p {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  column-gap: 15px;
+}
+div input {
+  font-size: 18px;
 }
 #message {
   grid-row: 4/5;
   grid-column: 1/3;
+  font-size: 20px;
+  padding: 10px 20px;
 }
-.send.btn {
+.btn-container {
   grid-row: 5/6;
   grid-column: 1/3;
+}
+.send.btn {
   display: flex;
+  justify-content: center;
   height: 40px;
 }
-/* form {
+.footer {
+  margin-top: 80px;
+  /* background-color: lightgoldenrodyellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+.footer-right {
   display: flex;
   flex-direction: column;
-  padding: 2vw 4vw;
-  width: 90%;
-  background-color: white;
-  max-width: 600px;
-  border-radius: 10px;
-} */
+  width: 231.21px;
+  align-items: center;
+}
+.footer-image {
+  width: 100px;
+  border-radius: 50%;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-center {
+  margin: 0 20px;
+}
+.icon-span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.social-icon {
+  margin: 0 10px;
+  width: 30px;
+}

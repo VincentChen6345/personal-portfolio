@@ -27,10 +27,6 @@ function App() {
 
   return (
     <body className="app-container">
-      <script
-        src="https://kit.fontawesome.com/bd278545d3.js"
-        crossOrigin="anonymous"
-      ></script>
       <nav className="nav-container">
         <ul className="nav-bar">
           <li onClick={() => handleClickScroll(1)}>
@@ -46,7 +42,6 @@ function App() {
             </li>
             <li onClick={() => handleClickScroll(2)}>About Me</li>
             <li onClick={() => handleClickScroll(3)}>Projects</li>
-            <li onClick={() => handleClickScroll(4)}>Contact</li>
 
             <li className="toggle-btn">
               <ToggleButton />
@@ -58,7 +53,6 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/my-story" element={<MyStory />} />
       </Routes>
-      <footer className="footer">This is the footer</footer>
     </body>
   );
 }

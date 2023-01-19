@@ -1,24 +1,18 @@
 import portraitShort from "../img/portrait-short.png";
+import portraitSmall from "../img/portrait-small.png";
 import html5 from "../img/html5.svg";
 import css from "../img/css3.svg";
+import youtube from "../img/youtube.svg";
 import javascript from "../img/javascript.svg";
+import github from "../img/github.svg";
+import linkedIn from "../img/linkedin.svg";
+
 import { Card } from "./Card";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./MainPage.css";
 import { ProjectSlider } from "./ProjectSlider";
 
-// const sendEmail = () => {
-//   Email.send({
-//     Host: "smtp.gmail.com",
-//     Username: "vincent.chen6345@hotmail.com",
-//     Password: "Treatyourselflikeafriend!",
-//     To: "vincent.chen6345@hotmail.com",
-//     From: document.getElementById("email").value,
-//     Subject: "New Contact Enquiry",
-//     Body: "this is the body ",
-//   }).then((message) => alert(message));
-// };
 export const MainPage = () => {
   return (
     <>
@@ -62,25 +56,49 @@ export const MainPage = () => {
         <div className="divider"></div>
         <h1 className="section-heading">My Projects</h1>
         <ProjectSlider />
-      </section>
-      <section id="contact-me" className="contact-me">
         <div className="divider"></div>
-        <div className="form-container">
-          <form className="contact-form">
-            <h1 className="section-heading contact-me">Contact me</h1>
-            <p className="contact-text">I would love to hear from you!</p>
-            <div className="input-span">
-              <input type="text" id="name" placeholder=" Name" required />
-              <input type="email" id="email" placeholder="Email" required />
-            </div>
-            <textarea placeholder="Message" id="message" rows="4"></textarea>
-            <button type="submit" className="send btn">
-              Send
-            </button>
-          </form>
-        </div>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
       </section>
+
+      <footer className="footer">
+        <div className="footer-left">
+          <h3>Contact</h3>
+          <p>Feel free to contact me via email</p>
+          <span>vincent.chen6345@hotmail.com.</span>
+        </div>
+        <div className="footer-center">
+          <img
+            className="footer-image"
+            src={portraitSmall}
+            alt="small portrait "
+          />
+        </div>
+        <div className="footer-right">
+          <span className="signature link">V.Chen</span>
+          <span className="icon-span">
+            <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
+              <img
+                src={youtube}
+                alt="youtube icon"
+                className="youtube social-icon"
+              />
+            </a>
+            <a href="https://github.com/VincentChen6345">
+              <img
+                src={github}
+                alt="github icon"
+                className="github social-icon"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/vincentchen02/">
+              <img
+                src={linkedIn}
+                alt="linkedIn icon"
+                className="linkedIn social-icon"
+              />
+            </a>
+          </span>
+        </div>
+      </footer>
     </>
   );
 };
