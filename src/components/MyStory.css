@@ -1,4 +1,9 @@
 .my-story-section {
   margin-top: 80px;
-  height: 100vh;
+  height: 100%;
+  font-size: 25px;
+}
+.quote {
+  font-style: italic;
+  text-decoration: none;
 }
