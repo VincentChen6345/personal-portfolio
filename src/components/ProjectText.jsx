@@ -14,7 +14,7 @@ const content = {
   paragraph: [
     "   Dedicated to my late idol Bruce Lee, I created this tribute page to practice pure HTML and CSS.",
     "This is a challenge project from FrontEndMentor.io that I built on my own. The toggle button uses state to change the pricing details of each plan.",
-    "This is a challenge project from FrontEndMentor.io that I built on my own. When all inputs are valid, clicking confirm will print your details on the card images. I prop propagation, useState and string manipulation to build the validation logic.  ",
+    "This is a challenge project from FrontEndMentor.io that I built on my own. When all inputs are valid, clicking confirm will print your details on the card images. I prop propagation, useState and string manipulation to build the validation logic. Note* You may get a dangerous site warning but I promise it's a harmless front-end credit card form haha. ",
     " This is a challenge project from FrontEndMentor.io that I built on my own. A simple life advice generator which fetches data from an api when the button is clicked and renders it. ",
   ],
   site: [
@@ -44,10 +44,10 @@ const ProjectText = (props) => {
       </ul>
       <p className="paragraph-text">{content.paragraph[props.slide]}</p>
       <span className="btn-container">
-        <a href={content.site[props.slide]} className="btn btn-visit">
+        <a href={content.site[props.slide]} className="btn btn-visit btn-slide">
           Visit
         </a>
-        <a href={content.code[props.slide]} className="btn btn-code">
+        <a href={content.code[props.slide]} className="btn btn-code btn-slide">
           Code
         </a>
       </span>{" "}

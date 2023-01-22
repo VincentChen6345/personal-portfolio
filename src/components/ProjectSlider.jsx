@@ -68,7 +68,6 @@ export const ProjectSlider = () => {
           &rarr;
         </button>
       </div>
-      <div className="dots"></div>
     </div>
   );
 };

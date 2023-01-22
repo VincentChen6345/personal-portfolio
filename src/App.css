@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap");
 
+:root {
+  /* light mode color variables */
+  --primary-color: #6200ee;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --secondary-variant: #018786;
+  --background: #ffffff;
+  --on-background: #000000;
+}
+/*set a background color on all elements whose has a data-theme attribute equal to 'dark'*/
+[data-theme="dark"] {
+  /* dark mode color variables */
+  --primary-color: #bb86fc;
+  --primary-variant: #3700b3;
+  --secondary: #03dac6;
+  --secondary-variant: #018786;
+  --background: #121212;
+  --on-background: #ffffff;
+}
 * {
   padding: 0;
   margin: 0;
@@ -9,16 +28,19 @@
 .app-container {
   padding: 0 80px;
 }
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+}
 html {
   scroll-behavior: smooth;
 }
 section {
-  height: 100vh;
+  height: 100%;
 }
 
 .nav-container {
   position: relative;
-  font-size: 18px;
 }
 .nav-bar {
   display: flex;
@@ -37,12 +59,9 @@ section {
 .right-nav {
   display: flex;
 }
-/* p {
-  font-family: Arial, Helvetica, sans-serif;
-} */
+
 .introduction {
   display: flex;
-  /* background-color: bisque; */
   margin-top: 80px;
 }
 .introduction-text {
@@ -58,9 +77,8 @@ section {
   position: absolute;
   right: 80px;
   top: 80px;
-  z-index: -10;
 }
-span li {
+.li.btn {
   margin-left: 15px;
   margin-right: 15px;
   cursor: pointer;
@@ -68,10 +86,41 @@ span li {
   align-items: center;
   justify-content: center;
 }
-span li:not(:last-child) {
-  border: 2px solid blue;
+.btn {
+  border: 2px solid var(--secondary);
   padding: 5px 15px;
   width: 115px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  border-color: var(--on-background);
+  color: var(--background);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--secondary);
+  transition: all 0.3s ease-out;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+.btn.btn-slide {
+  z-index: 1;
 }
 span li:last-child {
   margin-left: 15px;
@@ -95,38 +144,17 @@ span li:last-child {
   margin-bottom: 30px;
 }
 
-.btn {
-  text-decoration: none;
-  font-size: 18px;
-  border: 2px solid blue;
-  padding: 5px 15px;
-
-  width: 115px;
-}
 .about-me {
   text-align: center;
 }
-.lang-svg {
-  width: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.language-icons {
-  margin-top: 50px;
-  display: flex;
-}
+
 .divider {
   width: 100%;
   height: 2px;
   margin-top: 80px;
-  background-color: black;
+  background-color: var(--secondary-variant);
 }
-em {
-  font-style: normal;
-  text-decoration: underline;
-  text-decoration-color: blue;
-  text-underline-offset: 10px;
-}
+
 .card-section {
   display: flex;
   flex-direction: row;
@@ -144,7 +172,54 @@ em {
   font-size: 30px;
   cursor: pointer;
 }
-.link {
+/* .link {
   text-decoration: none;
-  color: #000;
+  color: var(--on-background);
+} */
+a {
+  text-decoration: none;
+
+  color: var(--on-background);
+}
+/* a:hover {
+  color: var(--background);
+} */
+
+/* footer styling */
+
+.footer {
+  margin-top: 40px;
+  /* background-color: lightgoldenrodyellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  width: 231.21px;
+  align-items: center;
+}
+.footer-image {
+  width: 100px;
+  border-radius: 50%;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-center {
+  margin: 0 20px;
+}
+.icon-span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.social-icon {
+  margin: 0 10px;
+  width: 30px;
 }

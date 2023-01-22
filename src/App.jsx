@@ -39,13 +39,26 @@ function App() {
             </Link>
           </li>
           <span className="right-nav">
-            <li>
-              <Link to="/my-story" className="link">
-                My Story
-              </Link>
+            <Link to="/my-story" className="link">
+              <li className="li btn btn-slide">My Story</li>
+            </Link>
+
+            <li
+              className="li btn btn-slide"
+              onClick={() => handleClickScroll(2)}
+            >
+              About Me
             </li>
-            <li onClick={() => handleClickScroll(2)}>About Me</li>
-            <li onClick={() => handleClickScroll(3)}>Projects</li>
+            <li
+              className="li btn btn-slide"
+              onClick={() => handleClickScroll(3)}
+            >
+              Projects
+            </li>
+
+            <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
+              <li className="li btn btn-slide">Youtube</li>
+            </a>
 
             <li className="toggle-btn">
               <ToggleButton />
