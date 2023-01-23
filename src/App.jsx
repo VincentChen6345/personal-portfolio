@@ -7,7 +7,10 @@ import portraitSmall from "./img/portrait-small.png";
 import youtube from "./img/youtube.svg";
 import github from "./img/github.svg";
 import linkedIn from "./img/linkedin.svg";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 function App() {
   const handleClickScroll = (section) => {
     const headerEl = document.getElementById("header");
@@ -89,25 +92,30 @@ function App() {
           <span className="signature link">V.Chen</span>
           <span className="icon-span">
             <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
-              <img
-                src={youtube}
+              <FontAwesomeIcon
+                icon={faYoutube}
                 alt="youtube icon"
                 className="youtube social-icon"
-              />
+              ></FontAwesomeIcon>
             </a>
             <a href="https://github.com/VincentChen6345">
-              <img
-                src={github}
+              <FontAwesomeIcon
+                icon={faGithub}
                 alt="github icon"
                 className="github social-icon"
-              />
+              ></FontAwesomeIcon>
             </a>
             <a href="https://www.linkedin.com/in/vincentchen02/">
-              <img
+              {/* <img
                 src={linkedIn}
                 alt="linkedIn icon"
                 className="linkedIn social-icon"
-              />
+              /> */}
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                alt="linkedIn icon"
+                className="linkedIn social-icon"
+              ></FontAwesomeIcon>
             </a>
           </span>
         </div>

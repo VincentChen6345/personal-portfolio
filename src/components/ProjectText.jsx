@@ -50,7 +50,7 @@ const ProjectText = (props) => {
         <a href={content.code[props.slide]} className="btn btn-code btn-slide">
           Code
         </a>
-      </span>{" "}
+      </span>
     </div>
   );
 };

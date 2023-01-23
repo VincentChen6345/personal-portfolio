@@ -76,6 +76,7 @@ export const Card = (props) => {
     <div className="card-container">
       <h2 className="card-heading">{content[`title-${props.number}`]}</h2>
       <img
+        id={`image${props.number}`}
         src={content[`svg-${props.number}`]}
         alt="react icon"
         className="card-icon"
