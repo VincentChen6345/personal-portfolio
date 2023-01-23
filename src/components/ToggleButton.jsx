@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import "./ToggleButton.css";
-import React, { useState } from "react";
-const toggleSwitch = document.querySelector('input[type="checkbox"]');
+
+// const toggleSwitch = document.querySelector('input[type="checkbox"]');
 //document.querySelector('input[attribute='='attribute-value'])
 //check local storage for theme on load
 const currentTheme = localStorage.getItem("theme");
