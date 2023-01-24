@@ -2,17 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import "./ToggleButton.css";
-
-// const toggleSwitch = document.querySelector('input[type="checkbox"]');
-//document.querySelector('input[attribute='='attribute-value'])
-//check local storage for theme on load
-const currentTheme = localStorage.getItem("theme");
-console.log("the current theme is ", currentTheme);
+import { useEffect } from "react";
 
 //switch theme dynamically
 const switchTheme = (e) => {
-  console.log("e.target.checked", e.target.checked);
-
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
@@ -23,16 +16,22 @@ const switchTheme = (e) => {
     console.log("local storage set to light");
   }
 };
-///////////////////
-//figure out how to make the togglebutton start on 'checked' when starting in dark mode
-if (currentTheme) {
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  if (currentTheme === "dark") {
-  }
-}
+
 ////////////////
 // Event Listener
 export const ToggleButton = () => {
+  useEffect(() => {
+    //useEffect fetches items on first render (at the end of each render)
+    const currentTheme = localStorage.getItem("theme");
+    const toggleSwitch = document.querySelector('input[type="checkbox"]');
+
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+      if (currentTheme === "dark") {
+        toggleSwitch.checked = true;
+      }
+    }
+  });
   return (
     <div>
       {/* outer rectangle box */}

@@ -1,10 +1,13 @@
 import "./MyStory.css";
+import portrait2 from "../img/portrait-2.jpg";
 
 export const MyStory = () => {
   return (
     <article className="my-story-section">
-      <h1 className="section-heading">My Story</h1>
+      <h1 className="section-heading">My Story</h1>{" "}
+      <img src={portrait2} alt="portrait" className="story-portrait" />
       <p>
+        {" "}
         <em className="quote">
           "You've got to find what you love. Your work is going to fill a large
           part of your life, and the only way to be truly satisfied is to do
@@ -12,7 +15,7 @@ export const MyStory = () => {
           to love what you do."
         </em>
         - Steve Jobs, 2005.
-      </p>
+      </p>{" "}
       <br />
       <p>
         Like many young adults in their early to mid 20s, I questioned if I was

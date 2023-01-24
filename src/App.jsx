@@ -15,7 +15,6 @@ function App() {
     const aboutMeEl = document.getElementById("about-me-section");
     const myProjectsEl = document.getElementById("my-projects");
     const contactMeEl = document.getElementById("contact-me");
-    console.log(aboutMeEl);
     if (section === 1) {
       headerEl.scrollIntoView();
     }
