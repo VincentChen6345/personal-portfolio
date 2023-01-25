@@ -43,18 +43,22 @@ function App() {
               <li className="li btn btn-slide">My Story</li>
             </Link>
 
-            <li
-              className="li btn btn-slide"
-              onClick={() => handleClickScroll(2)}
-            >
-              About Me
-            </li>
-            <li
-              className="li btn btn-slide"
-              onClick={() => handleClickScroll(3)}
-            >
-              Projects
-            </li>
+            <Link to="/">
+              <li
+                className="li btn btn-slide"
+                onClick={() => handleClickScroll(2)}
+              >
+                About Me
+              </li>
+            </Link>
+            <Link to="/">
+              <li
+                className="li btn btn-slide"
+                onClick={() => handleClickScroll(3)}
+              >
+                Projects
+              </li>
+            </Link>
 
             <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
               <li className="li btn btn-slide">Youtube</li>

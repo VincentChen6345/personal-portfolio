@@ -228,3 +228,36 @@ a {
   width: 30px;
   color: var(--on-background);
 }
+
+@media only screen and (max-width: 1420px) {
+  .heading-primary {
+    font-size: 80px;
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .heading-primary {
+    font-size: 70px;
+  }
+  .summary {
+    padding-right: 150px;
+  }
+}
+@media only screen and (max-width: 1212px) {
+  .app-container {
+    padding: 0 60px;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .introduction-text {
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 1102px) {
+  .heading-primary {
+    font-size: 60px;
+  }
+  .summary {
+    font-size: 20px;
+  }
+}

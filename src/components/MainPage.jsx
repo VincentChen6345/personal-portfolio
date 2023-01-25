@@ -55,7 +55,7 @@ export const MainPage = () => {
         </div>
       </header>
       <section className="about-me-section" id="about-me-section">
-        <div className="divider"></div>
+        <div className="divider top"></div>
         <h1 className="section-heading">About Me</h1>
         <div className="card-section">
           <Card number="1" />
