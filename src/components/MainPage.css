@@ -90,8 +90,33 @@ div input {
   justify-content: center;
   height: 40px;
 }
+.card-section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
 @media only screen and (max-width: 1212px) {
   .divider.top {
     margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .card-section {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 30px;
+  }
+}
+@media only screen and (max-width: 1052px) {
+  .language-icons {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 908px) {
+  .lang-svg {
+    width: 40px;
   }
 }

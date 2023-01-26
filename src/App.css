@@ -155,11 +155,6 @@ span li:last-child {
   background-color: var(--secondary-variant);
 }
 
-.card-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
 .section-heading {
   margin-top: 80px;
   text-align: center;
@@ -172,18 +167,12 @@ span li:last-child {
   font-size: 30px;
   cursor: pointer;
 }
-/* .link {
-  text-decoration: none;
-  color: var(--on-background);
-} */
+
 a {
   text-decoration: none;
 
   color: var(--on-background);
 }
-/* a:hover {
-  color: var(--background);
-} */
 
 /* footer styling */
 
@@ -259,5 +248,43 @@ a {
   }
   .summary {
     font-size: 20px;
+    padding-right: 100px;
+  }
+}
+@media only screen and (max-width: 1052px) {
+  .app-container {
+    padding: 0 40px;
+  }
+  .portrait-photo {
+    width: 33vw;
+
+    right: 60px;
+  }
+  .introduction-text {
+    padding: 45px 0;
+
+    width: 57vw;
+  }
+}
+@media only screen and (max-width: 955px) {
+  .nav-bar {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 908px) {
+  .portrait-photo {
+    width: 30vw;
+
+    right: 40px;
+  }
+  .introduction-text {
+    padding: 30px 0;
+    width: 60vw;
+  }
+  .heading-primary {
+    font-size: 50px;
+  }
+  .summary {
+    font-size: 18px;
   }
 }

@@ -73,7 +73,7 @@ export const Card = (props) => {
     "textBlock-3": textBlock3,
   };
   return (
-    <div className="card-container">
+    <div className={`card-container num${props.number}`}>
       <h2 className="card-heading">{content[`title-${props.number}`]}</h2>
       <img
         id={`image${props.number}`}
