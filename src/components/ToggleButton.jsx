@@ -33,7 +33,7 @@ export const ToggleButton = () => {
     }
   });
   return (
-    <div>
+    <div className="toggle-btn">
       {/* outer rectangle box */}
       <label className="switch">
         <input type="checkbox" onChange={switchTheme} />
