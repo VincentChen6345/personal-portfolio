@@ -3,38 +3,35 @@ import project1 from "../img/project-1.png";
 import project2 from "../img/project-2.png";
 import project3 from "../img/project-3.png";
 import project4 from "../img/project-4.png";
+import project5 from "../img/project-5.png";
 import React, { useRef, useEffect, useCallback } from "react";
 import ProjectText from "./ProjectText";
 
 export const ProjectSlider = () => {
   let curSlide = 0;
-  const slidesRef = useRef();
+  const slidesRef = useRef(); //useRef is sued to access a DOM element
   const goToSlide = useCallback((slideNumber) => {
+    //useCallback returns a memoised callback function- memoisation is caching a value so that it does not need to be recalculated
     const slides = slidesRef.current.querySelectorAll(".slide");
-
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
     );
   }, []);
 
   const nextSlide = () => {
-    console.log("nextSlide fired");
-
     curSlide++;
 
-    if (curSlide > 3) {
+    if (curSlide > 4) {
       curSlide = 0;
     }
 
     goToSlide(curSlide);
   };
   const prevSlide = () => {
-    console.log("prevSlide fired");
-
     curSlide--;
 
     if (curSlide < 0) {
-      curSlide = 3;
+      curSlide = 4;
     }
 
     goToSlide(curSlide);
@@ -60,7 +57,11 @@ export const ProjectSlider = () => {
         <div className="slide slide--4">
           <img src={project4} alt="" className="project-image" />
           <ProjectText slide={3} />
-        </div>{" "}
+        </div>
+        <div className="slide slide--5">
+          <img src={project5} alt="" className="project-image" />
+          <ProjectText slide={4} />
+        </div>
         <button className="slider__btn slider__btn--left" onClick={prevSlide}>
           &larr;
         </button>

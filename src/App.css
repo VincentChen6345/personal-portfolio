@@ -185,7 +185,6 @@ a {
 
 .footer {
   margin-top: 40px;
-  /* background-color: lightgoldenrodyellow; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,14 +325,17 @@ a {
     display: block;
   }
   .drop-down {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
-    right: 40.5px;
+    right: 40px;
     top: 65px;
     width: fit-content;
     background-color: var(--background);
     height: 200px;
+  }
+  .introduction {
+    margin-top: 40px;
   }
 }

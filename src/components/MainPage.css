@@ -118,3 +118,19 @@ div input {
     width: 40px;
   }
 }
+@media only screen and (max-width: 811px) {
+  .card-section {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .card-container.num1 {
+    grid-row: 1/2;
+  }
+  .card-container.num2 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .card-container.num3 {
+    grid-row: 3/4;
+  }
+}

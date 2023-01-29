@@ -24,7 +24,44 @@ export const Navbar = () => {
       contactMeEl.scrollIntoView();
     }
   };
-  const displayMenu = () => {};
+  document.addEventListener("click", function (e) {
+    const dropDownMenu = document.querySelector(".drop-down");
+    const hamburgerIcon = document.querySelector(".hamburger");
+
+    if (
+      dropDownMenu.style.display === "flex" &&
+      !dropDownMenu.contains(e.target) &&
+      !hamburgerIcon.contains(e.target) &&
+      window.innerWidth <= 820
+    ) {
+      dropDownMenu.style.display = "none";
+    }
+  });
+  window.addEventListener("resize", () => {
+    const dropDownMenu = document.querySelector(".drop-down");
+    console.log("window innerWidth", window.innerWidth);
+
+    if (window.innerWidth > 820) {
+      console.log("add display");
+
+      dropDownMenu.style.display = "flex";
+    } else {
+      console.log("remove display");
+
+      dropDownMenu.style.removeProperty("display");
+    }
+  });
+
+  const displayMenu = () => {
+    console.log("clicked");
+    const dropDownMenu = document.querySelector(".drop-down");
+    if (dropDownMenu.style.display === "flex") {
+      dropDownMenu.style.display = "none";
+    } else {
+      dropDownMenu.style.display = "flex";
+    }
+  };
+
   return (
     <nav className="nav-container">
       <div className="brand-container">
@@ -35,7 +72,7 @@ export const Navbar = () => {
         </li>
       </div>
       <div className="nav-bar">
-        <ul className=" drop-down">
+        <ul className=" drop-down" id="drop-down">
           <Link to="/my-story" className="link">
             <li className="li btn btn-slide">My Story</li>
           </Link>
