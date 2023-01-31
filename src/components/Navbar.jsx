@@ -39,7 +39,6 @@ export const Navbar = () => {
   });
   window.addEventListener("resize", () => {
     const dropDownMenu = document.querySelector(".drop-down");
-    console.log("window innerWidth", window.innerWidth);
 
     if (window.innerWidth > 820) {
       console.log("add display");

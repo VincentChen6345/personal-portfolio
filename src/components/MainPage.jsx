@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import "./MainPage.css";
 import { ProjectSlider } from "./ProjectSlider";
-
+import { ProjectList } from "./ProjectList";
 export const MainPage = () => {
   return (
     <>
@@ -67,6 +67,7 @@ export const MainPage = () => {
         <div className="divider"></div>
         <h1 className="section-heading">My Projects</h1>
         <ProjectSlider />
+        <ProjectList />
       </section>
     </>
   );
