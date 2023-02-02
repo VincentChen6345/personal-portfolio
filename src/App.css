@@ -43,7 +43,6 @@ section {
   position: relative;
   display: flex;
   height: 100%;
-  width: 100vw;
 }
 .brand-container {
   list-style: none;
@@ -312,6 +311,13 @@ a {
   .summary {
     font-size: 18px;
   }
+  .footer {
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+  .footer-image {
+    width: 80px;
+  }
 }
 @media only screen and (max-width: 820px) {
   .hamburger-icon {
@@ -357,5 +363,27 @@ a {
   }
   .about-me-section {
     margin-left: 40px;
+  }
+}
+@media only screen and (max-width: 642px) {
+  .footer-image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 494px) {
+  .app-container {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 459px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer-left {
+    margin-bottom: 15px;
+  }
+  .footer-right {
+    padding-bottom: 20px;
   }
 }
