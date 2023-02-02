@@ -101,9 +101,9 @@ export const Navbar = () => {
 
       <ToggleButton />
 
-      <a href="javascript:void(0)" className="hamburger" onClick={displayMenu}>
+      <button className="hamburger" onClick={displayMenu}>
         <FontAwesomeIcon icon={faBars} className="hamburger-icon" />
-      </a>
+      </button>
     </nav>
   );
 };

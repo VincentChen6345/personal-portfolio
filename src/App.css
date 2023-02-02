@@ -326,7 +326,11 @@ a {
   .hamburger {
     width: 45px;
     height: 45px;
+    color: var(--on-background);
+    background: none;
+    border: none;
   }
+
   .nav-bar {
     display: block;
   }
