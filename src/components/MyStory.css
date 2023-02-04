@@ -39,7 +39,7 @@
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 450px) {
   .my-story-section {
     font-size: 18px;
   }
