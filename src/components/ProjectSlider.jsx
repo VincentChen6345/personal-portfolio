@@ -1,13 +1,15 @@
 import "./ProjectSlider.css";
-import project1 from "../img/project-1.png";
-import project2 from "../img/project-2.png";
-import project3 from "../img/project-3.png";
-import project4 from "../img/project-4.png";
-import project5 from "../img/project-5.png";
+// import project1 from "../img/project-1.png";
+// import project2 from "../img/project-2.png";
+// import project3 from "../img/project-3.png";
+// import project4 from "../img/project-4.png";
+// import project5 from "../img/project-5.png";
 import React, { useRef, useEffect, useCallback } from "react";
 import ProjectText from "./ProjectText";
+import { useProject } from "./ProjectContext";
 
 export const ProjectSlider = () => {
+  const projects = useProject();
   let curSlide = 0;
   const slidesRef = useRef(); //useRef is sued to access a DOM element
   const goToSlide = useCallback((slideNumber) => {
@@ -43,23 +45,23 @@ export const ProjectSlider = () => {
     <div className="slider-container">
       <div className="js-slider" ref={slidesRef}>
         <div className="slide slide--1">
-          <img src={project1} alt="" className="project-image" />
+          <img src={projects.images[0]} alt="" className="project-image" />
           <ProjectText slide={0} />
         </div>
         <div className="slide slide--2">
-          <img src={project2} alt="" className="project-image" />
+          <img src={projects.images[1]} alt="" className="project-image" />
           <ProjectText slide={1} />
         </div>
         <div className="slide slide--3">
-          <img src={project3} alt="" className="project-image" />
+          <img src={projects.images[2]} alt="" className="project-image" />
           <ProjectText slide={2} />
         </div>
         <div className="slide slide--4">
-          <img src={project4} alt="" className="project-image" />
+          <img src={projects.images[3]} alt="" className="project-image" />
           <ProjectText slide={3} />
         </div>
         <div className="slide slide--5">
-          <img src={project5} alt="" className="project-image" />
+          <img src={projects.images[4]} alt="" className="project-image" />
           <ProjectText slide={4} />
         </div>
         <button className="slider__btn slider__btn--left" onClick={prevSlide}>
