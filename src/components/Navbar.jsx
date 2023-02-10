@@ -64,11 +64,11 @@ export const Navbar = () => {
   return (
     <nav className="nav-container">
       <div className="brand-container">
-        <li onClick={() => handleClickScroll(1)}>
+        <span onClick={() => handleClickScroll(1)}>
           <Link to="/" className="signature link">
             V.Chen
           </Link>
-        </li>
+        </span>
       </div>
       <div className="nav-bar">
         <ul className=" drop-down" id="drop-down">

@@ -9,11 +9,9 @@ const switchTheme = (e) => {
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
-    console.log("local storage set to dark");
   } else {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
-    console.log("local storage set to light");
   }
 };
 

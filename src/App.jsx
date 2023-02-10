@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import { MyStory } from "./components/MyStory";
 import { MainPage } from "./components/MainPage";
 import portraitSmall from "./img/portrait-small.png";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";

@@ -71,3 +71,28 @@ input:checked + .slider:before {
     z-index: 6;
   }
 }
+@media only screen and (min-width: 1664px) {
+  .toggle-btn {
+    right: 10%;
+  }
+}
+@media only screen and (min-width: 1664px) {
+  .toggle-btn {
+    right: 15%;
+  }
+}
+@media only screen and (min-width: 2158px) {
+  .toggle-btn {
+    right: 20%;
+  }
+}
+@media only screen and (min-width: 2587px) {
+  .toggle-btn {
+    right: 25%;
+  }
+}
+@media only screen and (min-width: 2987px) {
+  .toggle-btn {
+    right: 30%;
+  }
+}

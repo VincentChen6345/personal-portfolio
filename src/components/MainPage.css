@@ -134,3 +134,11 @@ div input {
     grid-row: 3/4;
   }
 }
+/*for widescreens*/
+@media only screen and (min-width: 1500px) {
+  .portrait-photo {
+    width: 525px;
+    height: 697.22px;
+    position: initial;
+  }
+}
