@@ -12,6 +12,12 @@ export const ProjectSlider = () => {
     const slides = slidesRef.current.querySelectorAll(".slide");
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
+      /*when slideNumber=0, 0%,100%,200%,300%,400% 
+      when slideNumber=1, -100%,0%,100%,200%,300%
+      when slideNumber=2, -200%,-100%,0%,100%,200%
+      the slide at 0% gets displayed
+
+      */
     );
   }, []);
 

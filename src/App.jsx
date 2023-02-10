@@ -7,7 +7,7 @@ import portraitSmall from "./img/portrait-small.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Navbar } from "./components/Navbar";
 import { ProjectProvider } from "./components/ProjectContext";
 function App() {
@@ -42,22 +42,22 @@ function App() {
                   icon={faYoutube}
                   alt="youtube icon"
                   className="youtube social-icon"
-                ></FontAwesomeIcon>
+                />
               </a>
               <a href="https://github.com/VincentChen6345">
                 <FontAwesomeIcon
                   icon={faGithub}
                   alt="github icon"
                   className="github social-icon"
-                ></FontAwesomeIcon>
+                />
               </a>
-              <a href="https://www.linkedin.com/in/vincentchen02/">
+              {/* <a href="https://www.linkedin.com/in/vincentchen02/">
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   alt="linkedIn icon"
                   className="linkedIn social-icon"
                 ></FontAwesomeIcon>
-              </a>
+              </a> */}
             </span>
           </div>
         </footer>
