@@ -50,7 +50,7 @@
   border: solid 3px var(--primary-variant);
   padding: 20px 20px;
   position: absolute;
-  bottom: 4.5px;
+  bottom: 4px;
   left: 0;
   opacity: 0;
   width: inherit;
