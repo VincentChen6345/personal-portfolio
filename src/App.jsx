@@ -51,13 +51,13 @@ function App() {
                   className="github social-icon"
                 />
               </a>
-              {/* <a href="https://www.linkedin.com/in/vincentchen02/">
+              {/* 
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   alt="linkedIn icon"
                   className="linkedIn social-icon"
                 ></FontAwesomeIcon>
-              </a> */}
+              */}
             </span>
           </div>
         </footer>

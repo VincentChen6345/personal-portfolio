@@ -10,7 +10,6 @@ export const Navbar = () => {
     const headerEl = document.getElementById("header");
     const aboutMeEl = document.getElementById("about-me-section");
     const myProjectsEl = document.getElementById("my-projects");
-    const contactMeEl = document.getElementById("contact-me");
     if (section === 1) {
       headerEl.scrollIntoView();
     }
@@ -19,9 +18,6 @@ export const Navbar = () => {
     }
     if (section === 3) {
       myProjectsEl.scrollIntoView();
-    }
-    if (section === 4) {
-      contactMeEl.scrollIntoView();
     }
   };
   document.addEventListener("click", function (e) {
