@@ -21,8 +21,8 @@ export const MainPage = () => {
               I'm <em>Vincent Chen</em>.
             </h2>
             <p className="summary">
-              I'm an aspiring front-end developer passionate about creating
-              great user experiences for everyone on the Internet.
+              I'm a tech career changer passionate about learning how to use
+              software and IT to solve real problems for people.
             </p>
             <Link className="btn about-me link btn-slide" to="/my-story">
               My Story

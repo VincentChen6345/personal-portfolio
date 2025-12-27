@@ -4,6 +4,7 @@
   margin-top: 50px;
   color: #6d69fb;
 }
+
 .card-container {
   border-radius: 10px;
   height: 450px;
@@ -19,6 +20,10 @@
 .card-container:hover > .description {
   visibility: visible;
   opacity: 1;
+}
+.card-container:hover > .card-icon {
+  visibility: hidden;
+  opacity: 0;
 }
 .card-heading {
   font-size: 30px;
