@@ -50,12 +50,12 @@ export const Card = (props) => {
       gym, hiking around Sydney and learning Korean!
       <br />
       <br />
-      I'm also currently documenting my career change into tech through my
+      {/* I'm also currently documenting my career change into tech through my
       Youtube channel -
       <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
         Cyber Vince
       </a>
-      ! Check it out!
+      ! Check it out! */}
     </p>
   );
   const content = {

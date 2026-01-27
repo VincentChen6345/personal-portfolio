@@ -37,18 +37,13 @@ export const Navbar = () => {
     const dropDownMenu = document.querySelector(".drop-down");
 
     if (window.innerWidth > 820) {
-      console.log("add display");
-
       dropDownMenu.style.display = "flex";
     } else {
-      console.log("remove display");
-
       dropDownMenu.style.removeProperty("display");
     }
   });
 
   const displayMenu = () => {
-    console.log("clicked");
     const dropDownMenu = document.querySelector(".drop-down");
     if (dropDownMenu.style.display === "flex") {
       dropDownMenu.style.display = "none";
@@ -89,9 +84,9 @@ export const Navbar = () => {
             </li>
           </Link>
 
-          <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
+          {/* <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
             <li className="li btn btn-slide">Youtube</li>
-          </a>
+          </a> */}
         </ul>{" "}
       </div>
 

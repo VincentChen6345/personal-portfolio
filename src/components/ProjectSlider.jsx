@@ -6,12 +6,12 @@ import { useProject } from "./ProjectContext";
 export const ProjectSlider = () => {
   const projects = useProject();
   let curSlide = 0;
-  const slidesRef = useRef(); //useRef is sued to access a DOM element
+  const slidesRef = useRef(); //useRef is used to access a DOM element
   const goToSlide = useCallback((slideNumber) => {
     //useCallback returns a memoised callback function- memoisation is caching a value so that it does not need to be recalculated
     const slides = slidesRef.current.querySelectorAll(".slide");
     slides.forEach(
-      (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`)
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slideNumber)}%)`),
       /*when slideNumber=0, 0%,100%,200%,300%,400% 
       when slideNumber=1, -100%,0%,100%,200%,300%
       when slideNumber=2, -200%,-100%,0%,100%,200%
