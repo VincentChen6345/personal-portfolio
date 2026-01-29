@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import Project1 from "../img/project-1.png";
-import Project2 from "../img/project-2.png";
-import Project3 from "../img/project-3.png";
-import Project4 from "../img/project-4.png";
-import Project5 from "../img/project-5.png";
+import PkmImg from "../img/project-1.png";
+import PriceCardImg from "../img/project-2.png";
+import ValidationFormImg from "../img/project-3.png";
+import BruceLeeImg from "../img/project-4.png";
+import PortfolioImg from "../img/project-5.png";
+import KoreanFlashcardImg from "../img/flashcard-img.png";
 const ProjectContext = React.createContext();
 
 export function useProject() {
@@ -11,8 +12,16 @@ export function useProject() {
 }
 export const ProjectProvider = ({ children }) => {
   const content = {
-    images: [Project1, Project2, Project3, Project4, Project5],
+    images: [
+      KoreanFlashcardImg,
+      PkmImg,
+      PriceCardImg,
+      ValidationFormImg,
+      BruceLeeImg,
+      PortfolioImg,
+    ],
     title: [
+      "Korean Alphabet Flashcards",
       "Pokemon Pokedex",
       "Pricing Toggle Button",
       "Credit Card Validation Form",
@@ -20,6 +29,7 @@ export const ProjectProvider = ({ children }) => {
       "Personal Portfolio Page",
     ],
     languages: [
+      ["HTML", "CSS", "JS", "REACT"],
       ["HTML", "CSS", "JS", "API"],
       ["HTML", "CSS", "JS", "REACT"],
       ["HTML", "CSS", "JS", "REACT"],
@@ -27,6 +37,7 @@ export const ProjectProvider = ({ children }) => {
       ["HTML", "CSS", "JS", "REACT"],
     ],
     paragraph: [
+      "I'm learning Korean as a hobby! I tried using Duolingo but realised that Duolingo doesn't teach you the alphabet. That's why I created a flashcard app to help me learn the Korean alphabet. In the future, this may turn into the ultimate Korean tutorial for beginners!",
       "My favourite personal project to date. I created a Pokedex that displays all original 151 Kanto Pokemon via fetch API calls and DOM manipulation.",
       "This is a challenge project from FrontEndMentor.io that I built on my own. The toggle button uses state to change the pricing details of each plan.",
       "This is a challenge project from FrontEndMentor.io that I built on my own. When all inputs are valid, clicking confirm will print your details on the card images. I prop propagation, useState and string manipulation to build the validation logic. Note* You may get a dangerous site warning but I promise it's a harmless front-end credit card form haha. ",
@@ -34,6 +45,7 @@ export const ProjectProvider = ({ children }) => {
       "You're currently on it! This portfolio page is a culmination of all the front-end tricks and techniques I've learned so far in my coding journey. Take a look at how I coded it!",
     ],
     site: [
+      "https://koreanbeginner.netlify.app/",
       "https://beamish-sopapillas-b9c130.netlify.app/",
       "https://gleeful-bublanina-d35e0e.netlify.app/",
       "https://interactive-credit-card-form.netlify.app/",
@@ -41,6 +53,7 @@ export const ProjectProvider = ({ children }) => {
       "https://personal-portfolio-age.netlify.app/",
     ],
     code: [
+      "https://github.com/VincentChen6345/korean-hangul-flashcards",
       "https://github.com/VincentChen6345/pokedex",
       "https://github.com/VincentChen6345/toggle-master",
       "https://github.com/VincentChen6345/interactive-credit-card-form",
