@@ -83,10 +83,6 @@ export const Navbar = () => {
               Projects
             </li>
           </Link>
-
-          {/* <a href="https://www.youtube.com/channel/UCCGDEl1BE_1lJ1JR6kk653w">
-            <li className="li btn btn-slide">Youtube</li>
-          </a> */}
         </ul>{" "}
       </div>
 

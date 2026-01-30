@@ -32,13 +32,13 @@ export const MyStory = () => {
         </p>
         <br></br>
         <p>
-          This year I took the leap and left my civil engineering career of 3.5
-          years to pursue a Master of IT at UNSW.
+          In July of 2025, I took the leap and left my civil engineering career
+          of 3.5 years to pursue a Master of IT at UNSW.
         </p>
         <br />
         <p>
           I know now that my passion lies in building the digital world and I’m
-          excited to keep learning, creating, and contributing to meaningful
+          excited to keep learning, creating and contributing to meaningful
           projects.
         </p>
       </div>

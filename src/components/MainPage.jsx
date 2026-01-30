@@ -1,10 +1,7 @@
 import portraitShort from "../img/portrait-short.png";
-import html5 from "../img/html5.svg";
-import css from "../img/css3.svg";
-import javascript from "../img/javascript.svg";
-import react from "../img/react.svg";
-
+import { techStack } from "../data/techStack";
 import { Card } from "./Card";
+import { cards } from "../data/cardContent";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./MainPage.css";
@@ -28,27 +25,12 @@ export const MainPage = () => {
               My Story
             </Link>
             <div className="language-icons">
-              <span className="icon-span">
-                <img src={html5} alt="html5 logo" className="lang-svg" />
-                <p className="lang-name">HTML</p>
-              </span>
-              <span className="icon-span">
-                <img src={css} alt="css logo" className="lang-svg" />
-                <p className="lang-name">CSS</p>
-              </span>
-              <span className="icon-span">
-                <img
-                  src={javascript}
-                  alt="javascript logo"
-                  className="lang-svg"
-                />
-                <p className="lang-name">JavaScript</p>
-              </span>
-
-              <span className="icon-span">
-                <img src={react} alt="react logo" className="lang-svg" />
-                <p className="lang-name">React.js</p>
-              </span>
+              {techStack.map((item) => (
+                <span className="icon-span" key={item.alt}>
+                  <img src={item.img} alt={item.alt} className="lang-svg" />
+                  <p className="lang-name">{item.name}</p>
+                </span>
+              ))}
             </div>
           </div>
           <img src={portraitShort} alt="portrait " className="portrait-photo" />
@@ -58,9 +40,9 @@ export const MainPage = () => {
         <div className="divider top"></div>
         <h1 className="section-heading">About Me</h1>
         <div className="card-section">
-          <Card number="1" />
-          <Card number="2" />
-          <Card number="3" />
+          {cards.map((item) => (
+            <Card cardData={item} />
+          ))}
         </div>
       </section>
       <section id="my-projects" className="my-projects">
