@@ -2,7 +2,7 @@ import reactIcon from "../img/undraw_react_light.svg";
 import interestIcon from "../img/undraw_interests_light.svg";
 import cityIcon from "../img/undraw_city_light.svg";
 
-export const cards = [
+export const cardContent = [
   {
     number: 0,
     title: "Programmer",
