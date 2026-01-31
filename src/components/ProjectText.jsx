@@ -1,8 +1,4 @@
-import { useProject } from "./ProjectContext";
-
 const ProjectText = ({ project }) => {
-  const projects = useProject();
-
   return (
     <div className="project-overview">
       <h3 className="project-title">{project.title}</h3>
