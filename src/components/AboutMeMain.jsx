@@ -8,7 +8,7 @@ export const AboutMeMain = () => {
       <h1 className="section-heading">About Me</h1>
       <div className="card-section">
         {cardContent.map((item) => (
-          <Card cardData={item} />
+          <Card cardData={item} key={item.alt} />
         ))}
       </div>
     </section>

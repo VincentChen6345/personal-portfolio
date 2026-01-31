@@ -29,7 +29,7 @@ export function SelfIntroduction() {
           </Link>
           <div className="language-icons">
             {techStack.map((item) => (
-              <SkillIcon element={item} />
+              <SkillIcon element={item} key={item.alt} />
             ))}
           </div>
         </div>
