@@ -31,7 +31,7 @@ export const cardContent = [
     alt: "city icon",
     icon: cityIcon,
     textBlock: (
-      <p>
+      <div>
         Went to uni to learn how to build buildings, came out wanting to build
         websites ... oops.
         <br />
@@ -49,7 +49,7 @@ export const cardContent = [
         <br />
         I'm sure I can bring these skills into any tech company to support your
         team!
-      </p>
+      </div>
     ),
   },
   {

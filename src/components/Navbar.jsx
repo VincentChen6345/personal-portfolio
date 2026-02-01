@@ -63,7 +63,7 @@ export const Navbar = () => {
       <div className="nav-bar">
         <ul className=" drop-down" id="drop-down">
           {routerData.map((item) => (
-            <Link to={item.path}>
+            <Link to={item.path} key={item.title}>
               <li
                 className="li btn btn-slide"
                 onClick={() => handleClickScroll(item.onClick)}

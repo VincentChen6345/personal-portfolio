@@ -9,14 +9,14 @@ import { Footer } from "./components/Footer";
 function App() {
   return (
     <ProjectProvider>
-      <body className="app-container">
+      <main className="app-container">
         <Navbar />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/my-story" element={<MyStory />} />
         </Routes>
         <Footer />
-      </body>
+      </main>
     </ProjectProvider>
   );
 }

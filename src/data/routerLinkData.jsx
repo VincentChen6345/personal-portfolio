@@ -1,7 +1,7 @@
 export const routerData = [
   {
     title: "My Story",
-    onClick: 0,
+    onClick: 0, //i.e. go nowhere
     path: "/my-story",
   },
   {
