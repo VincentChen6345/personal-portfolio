@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { routerData } from "../data/routerLinkData.jsx";
 
 export const Navbar = () => {
   useEffect(() => {
@@ -46,7 +47,6 @@ export const Navbar = () => {
   };
 
   const displayMenu = () => {
-    console.log("hamburger clicked");
     const dropDownMenu = document.querySelector(".drop-down");
     dropDownMenu.style.display =
       dropDownMenu.style.display === "flex" ? "none" : "flex";
@@ -62,26 +62,17 @@ export const Navbar = () => {
       </div>
       <div className="nav-bar">
         <ul className=" drop-down" id="drop-down">
-          <Link to="/my-story" className="link">
-            <li className="li btn btn-slide">My Story</li>
-          </Link>
-          <Link to="/">
-            <li
-              className="li btn btn-slide"
-              onClick={() => handleClickScroll(2)}
-            >
-              About Me
-            </li>
-          </Link>
-          <Link to="/">
-            <li
-              className="li btn btn-slide"
-              onClick={() => handleClickScroll(3)}
-            >
-              Projects
-            </li>
-          </Link>
-        </ul>{" "}
+          {routerData.map((item) => (
+            <Link to={item.path}>
+              <li
+                className="li btn btn-slide"
+                onClick={() => handleClickScroll(item.onClick)}
+              >
+                {item.title}
+              </li>
+            </Link>
+          ))}
+        </ul>
       </div>
       <ToggleButton />
       <button className="hamburger" onClick={displayMenu}>
@@ -90,5 +81,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-
-//consider refactoring the drop-down <Link> elements with a map method
